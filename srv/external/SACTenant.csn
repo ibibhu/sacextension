@@ -37,6 +37,42 @@
                     "type": "cds.String"
                 }
             }
+        },
+        "SACTenant.Users": {
+            "kind": "entity",
+            "@cds.persistence.skip": true,
+            "elements": {
+              "schemas": {
+                "type": "cds.LargeString"
+              },
+              "id": {
+                "type": "cds.LargeString"
+              },
+              "preferredLanguage": {
+                "type": "cds.LargeString"
+              },
+              "meta": {
+                "type": "cds.LargeString"
+              },
+              "displayName": {
+                "type": "cds.LargeString"
+              },
+              "active": {
+                "type": "cds.Boolean"
+              },
+              "emails": {
+                "type": "cds.LargeString"
+              },
+              "photos": {
+                "type": "cds.LargeString"
+              },
+              "roles": {
+                "type": "cds.LargeString"
+              },
+              "groups": {
+                "type": "cds.LargeString"
+              }
+            }
         }
     }
 }
