@@ -1,0 +1,33 @@
+{
+    "welcomeFile": "index.html",
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "^/catalog/(.*)$",
+            "authenticationType": "xsuaa",
+            "scope": "$XSAPPNAME.Viewer",
+            "destination": "srv"
+        }
+        ,
+        {
+            "source": "^/catalog2/(.*)$",
+            "authenticationType": "xsuaa",
+            "scope": "$XSAPPNAME.Viewer",
+            "destination": "srv2"
+        }
+        ,
+        {
+            "source": "^/srvjs/(.*)$",
+            "authenticationType": "xsuaa",
+            "scope": "$XSAPPNAME.Viewer",
+            "destination": "srvjs"
+        }
+        ,
+        {
+            "source": "^/(.*)$",
+            "authenticationType": "xsuaa",
+            "scope": "$XSAPPNAME.Viewer",
+            "localDir": "resources"
+        }
+    ]
+}

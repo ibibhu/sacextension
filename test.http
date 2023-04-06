@@ -1,0 +1,18 @@
+GET http://localhost:4004/catalog/
+Authorization: Basic joe:
+###
+GET http://localhost:4004/catalog/$metadata
+Authorization: Basic joe:
+###
+GET http://localhost:4004/catalog/Stories
+Authorization: Basic joe:
+###
+GET http://localhost:4004/catalog/userInfo()
+Authorization: Basic joe:
+###
+GET http://localhost:5002/srvjs/
+###
+GET http://localhost:5002/srvjs/info
+###
+GET http://localhost:5002/srvjs/dest
+###

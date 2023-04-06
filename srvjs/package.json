@@ -1,0 +1,14 @@
+{
+    "name": "SACEXTENSION-srvjs",
+    "dependencies": {
+        "express": "latest",
+        "@sap/xssec": "latest",
+        "passport": "latest",
+        "@sap-cloud-sdk/http-client": "^2",
+        "@sap-cloud-sdk/connectivity": "^2",
+        "@sap/xsenv": "latest"
+    },
+    "scripts": {
+        "start": "node server.js"
+    }
+}
