@@ -32,7 +32,7 @@ modules:
       disk-quota: 1024M
     requires:
       - name: SACEXTENSION-uaa
-      - name: SACEXTENSION-dest
+      - name: StoriesOnly-dest
       - name: SACEXTENSION-logging
     provides:
       - name: srv-api
@@ -56,7 +56,7 @@ modules:
       disk-quota: 1024M
     requires:
       - name: SACEXTENSION-uaa
-      - name: SACEXTENSION-dest
+      - name: StoriesOnly-dest
     provides:
       - name: srv2-api
         properties:
@@ -79,7 +79,7 @@ modules:
       disk-quota: 1024M
     requires:
       - name: SACEXTENSION-uaa
-      - name: SACEXTENSION-dest
+      - name: StoriesOnly-dest
     provides:
       - name: srvjs-api
         properties:
@@ -137,39 +137,12 @@ resources:
       path: ./xs-security.json
 
   # -------------------- DESTINATION SERVICE -------------------
-  - name: SACEXTENSION-dest
+  - name: StoriesOnly-dest
   # ------------------------------------------------------------
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination
       service-plan: lite
-      config:
-        init_data:
-          instance:
-            existing_destinations_policy: ignore
-            destinations:
-              - Name: SACEXTENSION-sac-tenant-api
-                Description: SAP Analytics Cloud Tenant API
-                URL: https://qrc-uat.rel.canary.eu10.projectorca.cloud
-                Type: HTTP
-                ProxyType: Internet
-                Authentication: OAuth2SAMLBearerAssertion
-                audience: https://qrc-uat.authentication.sap.hana.ondemand.com
-                authnContextClassRef: urn:oasis:names:tc:SAML:2.0:ac:classes:PreviousSession
-                clientKey: <SetValueInCockpit>
-                tokenServiceURL: https://qrc-uat.authentication.sap.hana.ondemand.com/oauth/token/alias/qrc-uat.canary
-                tokenServiceUser: <SetValueInCockpit>
-                tokenServicePassword: <SetValueInCockpit>
-                nameIdFormat: urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
-                userIdSource: email
-                URL.headers.Application-Interface-Key: <SetValueInCockpit>
-                HTML5.DynamicDestination: true
-
-
-
-
-
-
 
   # ---------------- APPLICATION LOGGING SERVICE ---------------
   - name: SACEXTENSION-logging
