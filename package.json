@@ -113,11 +113,11 @@
         "impl": "srv/external/SACTenant.js",
         "credentials": {
           "[production]": {
-            "destination": "SACEXTENSION-sac-tenant-api",
+            "destination": "StoriesOnly-sac-tenant-api",
             "path": "/api/v1"
           },
           "[development]": {
-            "destination": "SACEXTENSION-sac-tenant-api",
+            "destination": "StoriesOnly-sac-tenant-api",
             "path": "/api/v1"
           }
         }
